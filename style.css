@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --cyan: hsl(193, 38%, 86%);
+  --green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+html,
+body {
+  height: 100%;
+  background-color: var(--dark-blue);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advice-card {
+  background-color: var(--dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  text-align: center;
+  width: min(90%, 390px);
+  padding: 1.5em 1.4em 0 1.4em;
+  color: white;
+}
+.advice-card {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.advice-card__header {
+  color: var(--green);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.advice-card__p {
+  font-weight: 800;
+  color: var(--cyan);
+  margin: 1.5em 0;
+}
+.advice-card__p::before {
+  content: open-quote;
+}
+.advice-card__p::after {
+  content: close-quote;
+}
+#next-advice {
+  border: 0;
+}
+#next-advice {
+  width: max-content;
+  align-self: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--green);
+  transform: translateY(50%);
+  cursor: pointer;
+}
+#next-advice:hover {
+  box-shadow: 0 0 20px var(--green);
+}
+#next-advice:active {
+  background-color: hsl(150, 78%, 60%);
+}
